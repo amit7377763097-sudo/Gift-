@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ably Dussehra Scratch Coupon — Premium</title>
+  <style>
+    :root{
+      --gold:#ffd700;
+      --gold-soft:#ffea8a;
+      --bg1:#000000;
+      --bg2:#111111;
+      --bg3:#1a1a1a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow:hidden;
+      text-align:center;
+      background: radial-gradient(1200px 600px at 50% 20%, #1a1a1a 0%, #000 60%);
+    }
+
+    /* Subtle animated golden haze background */
+    .glow-bg{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(600px 300px at 15% 20%, rgba(255,215,0,0.08), transparent 60%),
+        radial-gradient(500px 300px at 85% 30%, rgba(255,215,0,0.06), transparent 60%),
+        radial-gradient(700px 400px at 50% 90%, rgba(255,215,0,0.04), transparent 70%);
+      animation: floatGlow 12s ease-in-out infinite alternate;
+      filter: blur(1px);
+    }
+    @keyframes floatGlow{
+      0%{transform: translateY(-10px)}
+      100%{transform: translateY(10px)}
+    }
+
+    /* Soft particles (tiny twinkles) */
+    .twinkles, .twinkles::before, .twinkles::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-repeat:no-repeat;
+      animation: twinkle 6s linear infinite;
+      opacity:0.5;
+      filter: blur(0.2px);
+    }
+    .twinkles{
+      background-image:
+        radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.5), transparent 60%),
+        radial-gradient(2px 2px at 30% 80%, rgba(255,255,255,0.5), transparent 60%),
+        radial-gradient(2px 2px at 70% 30%, rgba(255,255,255,0.5), transparent 60%),
+        radial-gradient(2px 2px at 90% 60%, rgba(255,255,255,0.5), transparent 60%);
+    }
+    .twinkles::before{
+      background-image:
+        radial-gradient(2px 2px at 20% 50%, rgba(255,215,0,0.8), transparent 60%),
+        radial-gradient(2px 2px at 60% 15%, rgba(255,215,0,0.8), transparent 60%),
+        radial-gradient(2px 2px at 80% 75%, rgba(255,215,0,0.8), transparent 60%);
+      animation-duration: 7.5s;
+    }
+    .twinkles::after{
+      background-image:
+        radial-gradient(2px 2px at 40% 40%, rgba(255,255,255,0.5), transparent 60%),
+        radial-gradient(2px 2px at 75% 55%, rgba(255,215,0,0.7), transparent 60%);
+      animation-duration: 9s;
+    }
+    @keyframes twinkle{
+      0%,100%{opacity:0.3}
+      50%{opacity:0.7}
+    }
+
+    .logo{
+      font-size:38px;
+      font-weight:900;
+      letter-spacing:2px;
+      color:var(--gold);
+      text-shadow:0 0 10px rgba(255,215,0,0.35), 0 0 20px rgba(255,215,0,0.15);
+      position:relative;
+      margin-bottom:6px;
+      display:inline-block;
+      padding:0 6px;
+    }
+    /* Shine sweep over logo */
+    .logo::after{
+      content:"";
+      position:absolute;
+      top:0; left:-120%;
+      width:120%;
+      height:100%;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0.15) 35%, transparent 60%);
+      transform: skewX(-15deg);
+      animation: shine 3.5s ease-in-out infinite;
+    }
+    @keyframes shine{
+      0%{left:-140%}
+      60%{left:140%}
+      100%{left:140%}
+    }
+
+    .tagline{
+      font-size:16px;
+      color:var(--gold-soft);
+      margin-bottom:16px;
+      text-shadow:0 0 8px rgba(255,215,0,0.25);
+      animation: pulse 2.8s ease-in-out infinite;
+    }
+    @keyframes pulse{
+      0%,100%{opacity:0.8}
+      50%{opacity:1}
+    }
+
+    .form-box, .coupon{
+      width: 340px;
+      background: linear-gradient(180deg, #111, #0c0c0c);
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 8px 30px rgba(255, 215, 0, 0.18), inset 0 0 0 1px rgba(255,255,255,0.04);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    /* Card shine diagonally */
+    .form-box::before, .coupon::before{
+      content:"";
+      position:absolute;
+      top:-120%; left:-120%;
+      width:300%; height:300%;
+      background: conic-gradient(from 210deg, rgba(255,215,0,0.08), transparent 30%, rgba(255,255,255,0.06), transparent 70%);
+      animation: cardGlow 10s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes cardGlow{
+      to{transform: rotate(360deg);}
+    }
+
+    .form-box h2{ margin-bottom: 14px; color: var(--gold); }
+    .form-box input{
+      width: 92%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      text-align: center;
+      background:#fff;
+      color:#000;
+    }
+    .form-box button{
+      margin-top: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: var(--gold);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 800;
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 6px 18px rgba(255,215,0,0.25);
+    }
+    .form-box button:hover{ transform: translateY(-1px); }
+    .form-box button:active{ transform: translateY(0); }
+
+    .coupon{ display:none; height: 240px; }
+    #scratchCanvas{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+    }
+    .reward{
+      width:100%; height:100%;
+      background:#111;
+      color:var(--gold);
+      font-size:20px; font-weight:bold;
+      display:flex; align-items:center; justify-content:center;
+      flex-direction:column; gap:4px;
+      padding:10px;
+      position:relative;
+    }
+    .reward span{ font-size:26px; color:var(--gold-soft); }
+
+    .expiry{
+      font-size:12px; color:#bbb; margin-top:8px;
+    }
+
+    /* Tiny sparkle overlay inside reward */
+    .reward::after{
+      content:"";
+      position:absolute; inset:0;
+      pointer-events:none;
+      background-image:
+        radial-gradient(1.5px 1.5px at 12% 30%, rgba(255,255,255,0.6), transparent 60%),
+        radial-gradient(1.5px 1.5px at 78% 40%, rgba(255,215,0,0.9), transparent 60%),
+        radial-gradient(1.5px 1.5px at 42% 70%, rgba(255,255,255,0.6), transparent 60%);
+      animation: twinkle 7s linear infinite;
+      opacity:0.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow-bg"></div>
+  <div class="twinkles"></div>
+
+  <div class="logo">ABLY</div>
+  <div class="tagline">🎉 Ably Wishes You a Happy Dussehra! 🎉</div>
+
+  <div class="form-box" id="formBox">
+    <h2>Enter Your Details</h2>
+    <input type="text" id="fullName" placeholder="Full Name" required />
+    <input type="tel" id="mobile" placeholder="Mobile Number" required />
+    <button onclick="startCoupon()">Continue</button>
+  </div>
+
+  <div class="coupon" id="couponBox">
+    <div class="reward" id="rewardText">
+      🎉 Congratulations <br />
+      <span id="custName"></span><br />
+      You got ₹<span id="amount"></span>
+      <div class="expiry" id="expiryDate"></div>
+    </div>
+    <canvas id="scratchCanvas"></canvas>
+  </div>
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    function getWeightedAmount(){
+      const r = Math.random();
+      if(r < 0.8){
+        // 80% chance: 50–125
+        return Math.floor(Math.random() * (125 - 50 + 1)) + 50;
+      }else{
+        // 20% chance: 150–200
+        return Math.floor(Math.random() * (200 - 150 + 1)) + 150;
+      }
+    }
+
+    function startCoupon(){
+      const name = document.getElementById("fullName").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+
+      // Name: alphabets & spaces only, min 3 chars
+      if(!/^[A-Za-z ]{3,}$/.test(name)){
+        alert("Please enter a valid name (alphabets & spaces only, min 3 letters).");
+        return;
+      }
+      // Mobile: 10 digits (optionally starting 6-9)
+      if(!/^[6-9][0-9]{9}$/.test(mobile)){
+        alert("Please enter a valid 10-digit mobile number (starting with 6/7/8/9).");
+        return;
+      }
+
+      // Send to Google Sheet
+      fetch("YOUR_GOOGLE_SCRIPT_URL", {
+        method:"POST",
+        body: JSON.stringify({ name, mobile })
+      }).catch(err => console.log("Error:", err));
+
+      document.getElementById("formBox").style.display = "none";
+      document.getElementById("couponBox").style.display = "block";
+
+      document.getElementById("custName").innerText = name;
+      const amount = getWeightedAmount();
+      document.getElementById("amount").innerText = amount;
+
+      const today = new Date();
+      const formatted = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
+      document.getElementById("expiryDate").innerText = "Valid till: " + formatted;
+
+      initScratch();
+    }
+
+    function initScratch(){
+      const canvas = document.getElementById("scratchCanvas");
+      const ctx = canvas.getContext("2d");
+      let isDrawing = false;
+      let firedCelebration = false;
+
+      function resizeCanvas(){
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        ctx.globalCompositeOperation = "source-over";
+        ctx.fillStyle = "#969696";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        ctx.fillStyle = "#222";
+        ctx.font = "18px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("Scratch Here", canvas.width/2, canvas.height/2);
+      }
+      resizeCanvas();
+      window.addEventListener("resize", resizeCanvas);
+
+      function start(e){ isDrawing = true; draw(e); }
+      function stop(){ isDrawing = false; ctx.beginPath(); }
+
+      function draw(e){
+        if(!isDrawing) return;
+        e.preventDefault(); // prevent scroll on touch
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+        const y = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.beginPath();
+        ctx.arc(x, y, 35, 0, Math.PI*2);
+        ctx.fill();
+
+        if(!firedCelebration){
+          firedCelebration = true;
+          celebrate();
+        }
+      }
+
+      canvas.addEventListener("mousedown", start);
+      canvas.addEventListener("mouseup", stop);
+      canvas.addEventListener("mousemove", draw);
+      canvas.addEventListener("touchstart", start, {passive:false});
+      canvas.addEventListener("touchend", stop, {passive:false});
+      canvas.addEventListener("touchmove", draw, {passive:false});
+    }
+
+    // Grand celebration: multiple bursts + streamers
+    function celebrate(){
+      // Center burst
+      confetti({ particleCount: 120, spread: 75, origin: { y: 0.6 } });
+      // Left & right streamers
+      confetti({ particleCount: 60, angle: 60, spread: 55, origin: { x: 0, y: 0.7 } });
+      confetti({ particleCount: 60, angle: 120, spread: 55, origin: { x: 1, y: 0.7 } });
+      // Follow-up golden shimmer
+      setTimeout(() => {
+        confetti({ particleCount: 80, spread: 70, scalar: 0.8, origin: { y: 0.5 } });
+      }, 500);
+    }
+  </script>
+</body>
+</html>
